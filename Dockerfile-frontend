@@ -1,6 +1,6 @@
 FROM node:16-alpine
 
-ADD . /app
+ADD frontend /app
 
 WORKDIR /app
 
