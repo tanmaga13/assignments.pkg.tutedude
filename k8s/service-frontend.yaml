@@ -6,7 +6,7 @@ spec:
   selector:
     app: express-frontend
   ports:
-  - name: express-frontend-service
+  - name: express-frontend
     port: 3000
     targetPort: 3000
   type: NodePort
