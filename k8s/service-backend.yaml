@@ -4,8 +4,8 @@ metadata:
   name: flask-backend-service
 spec:
   selector:
-    app: flask-backend-service
+    app: flask-backend
   ports:
-  - name: flask-backend-service
     port: 8000
     targetPort: 8000
+  type: ClusterIP
