@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  express-frontend
+  labels:
+    desc:  ares-app-deployment
+spec:
+  selector:
+    matchLabels:
+      app: express-frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:  express-frontend
+    spec:
+      containers:
+      - name:  express-frontend
+        image:  docker.io/tanmaga13/ares-frontend:v1
+        ports:
+        - containerPort:  3000
+        env:
+        - name: BACKEND_URL
+          value: "http://flask-backend-service:8000"
